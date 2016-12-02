@@ -1,5 +1,6 @@
 class BusinessCategoryPolicy < ApplicationPolicy
 
+
   def new?
     is_admin?
   end

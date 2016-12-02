@@ -11,7 +11,6 @@ RSpec.describe User, type: :model do
     it { is_expected.to have_db_column :id }
     it { is_expected.to have_db_column :email }
     it { is_expected.to have_db_column :admin }
-    it { is_expected.to have_db_column :is_member }
   end
 
   describe 'Associations' do
@@ -28,6 +27,5 @@ RSpec.describe User, type: :model do
     subject { create(:user, admin: false) }
 
     it { is_expected.not_to be_admin }
-    it { expect(subject.is_member).to be_falsey}
   end
 end
